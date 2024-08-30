@@ -2,7 +2,6 @@ from tkinter import *
 from tkinter import messagebox
 import sqlite3 as sql
 
-# Database Operations
 class TaskDatabase:
     def __init__(self, db_name='listOfTasks.db'):
         self.conn = sql.connect(db_name)
@@ -28,23 +27,19 @@ class TaskDatabase:
     def close(self):
         self.conn.close()
 
-# GUI for Task Management
 class TaskManager:
     def __init__(self, root):
         self.db = TaskDatabase()
         self.tasks = []
 
-        # Window setup
         root.title("To-Do List")
         root.geometry("665x400+550+250")
         root.resizable(0, 0)
         root.configure(bg="#B5E5CF")
 
-        # Frame
         self.functions_frame = Frame(root, bg="#f9e79f")
         self.functions_frame.pack(side="top", expand=True, fill="both")
 
-        # Widgets
         self.create_widgets()
         self.retrieve_database()
         self.update_listbox()

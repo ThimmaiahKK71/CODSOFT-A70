@@ -4,7 +4,6 @@ public class cccodsoftA70 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Sample exchange rates (replace with actual rates)
         double usdToEur = 0.9;
         double usdToGbp = 0.75;
         double usdToInr = 82;
@@ -33,7 +32,6 @@ public class cccodsoftA70 {
 
             double convertedAmount = 0;
 
-            // Conversion logic (replace with a more efficient method)
             if (sourceCurrency.equals("USD")) {
                 if (targetCurrency.equals("EUR")) {
                     convertedAmount = amount * usdToEur;
